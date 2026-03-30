@@ -49,7 +49,7 @@ def main():
     
     print("initial accuracy:", evaluate(test_data, net))
     optimizer = torch.optim.Adam(net.parameters(), lr=0.001)
-    for epoch in range(2):
+    for epoch in range(10):
         for (x, y) in train_data:
             net.zero_grad()
             output = net.forward(x.view(-1, 28*28))
